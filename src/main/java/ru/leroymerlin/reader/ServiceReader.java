@@ -10,7 +10,8 @@ import java.util.stream.Collectors;
 
 public class ServiceReader {
     public static List<Service> getServices() throws URISyntaxException, IOException {
-        List<String> content = FileResourceUtil.getContentFromFile("billing/reconciliation.csv");
+        List<String> content = FileResourceUtil.getContentFromFile("reports/services.csv");
+//        List<String> content = FileResourceUtil.getContentFromFile("billing/reconciliation.csv");
 
         return content.stream().skip(1)
                 .map(it -> it.split(","))
